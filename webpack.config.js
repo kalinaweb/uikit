@@ -31,7 +31,7 @@ module.exports = {
                         loader: "css-loader",
                         options: {
                             sourceMap: true,
-                            minimize: true,
+                            /*minimize: true,*/
                             url: false
                         }
                     },
@@ -60,7 +60,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'index.pug',
+            template: './src/html/index.pug',
         })
     ]
 };
