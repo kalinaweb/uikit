@@ -6,28 +6,108 @@ header {
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
-
 header .wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
 }
-
-.logo {
+.header__logo {
   width: 106px;
   height: 40px;
 }
-
-.topMenu {
-  height: 40px;
-  flex: 0 1 auto;
-  background: #0A5D12;
-}
-
-.loginBtnsTop {
-  width: 303px;
+.header__btns {
+  width: 465px;
   height: 34px;
   flex: 0 1 auto;
-  background: #0B5295;
 }
+.header__btns .violetborder {
+  margin-right: 17px;
+}
+
+/*TopMenu start*/
+.header__topMenu {
+  height: 40px;
+  flex: 0 1 auto;
+  width: 100%;
+}
+.header__topMenu nav {
+  margin-top: 12px;
+  float: right;
+}
+.header__topMenu nav:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+.header__topMenu nav ul {
+  padding:0;
+  margin:0;
+  list-style: none;
+  position: relative;
+}
+.header__topMenu nav ul li {
+  margin: 0px;
+  display:inline-block;
+  float: left;
+  background-color: #ffffff;
+  margin-right: 1px;
+  height: 43px;
+}
+.header__topMenu nav ul li:last-child {
+  margin-right: 36px;
+}
+.header__topMenu nav ul li:nth-child(2) {
+  margin-right: 24px;
+}
+.header__topMenu nav a {
+  display:block;
+  padding:0 10px;
+  color:$dark_shade50;
+  font-size:$font_size_md;
+  /*line-height: 60px;*/
+  text-decoration:none;
+  font-family: Montserrat;
+}
+.header__topMenu nav ul li ul li:hover { background: #ffffff; }
+.header__topMenu nav a:hover {
+  color: $dark_shade75;
+}
+.header__topMenu nav ul ul {
+  display: none;
+  position: absolute;
+  margin-top: 25px;
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.2);
+}
+.header__topMenu nav ul li:hover > ul {
+  display:inherit;
+}
+.header__topMenu nav ul ul li {
+  min-width:100px;
+  float:none;
+  display:list-item;
+  position: relative;
+  border-bottom: 1px solid $dark_shade25;
+  line-height: 44px;
+}
+.header__topMenu nav ul ul li:last-child {
+  border-bottom: 0;
+}
+.header__topMenu nav ul ul ul {
+  position: absolute;
+  top:0;
+  left:100%;
+}
+.header__topMenu li > a:after {
+  content:  'keyboard_arrow_down';
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 20px;
+  top: 0px;
+  position: absolute;
+}
+.header__topMenu li > a:only-child:after { content: ''; }
+/*TopMenu stop*/
+

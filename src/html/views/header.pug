@@ -1,7 +1,36 @@
+mixin topMenu(link, name)
+  li
+    a(href=link)= name
+
+
 header
   div.wrap
-    a(href='index.html')
-      div.logo
+    div.header__logo
+      a(href='index.html')
         img(src='img/logo.png')
-    div.topMenu
-    div.loginBtnsTop
+    div.header__topMenu
+      nav
+        ul
+          li
+            a(href='*') О нас
+          li
+            a(href='*') Услуги
+            ul
+              li
+                a(href='*') Подбор
+              li
+                a(href='*') Бронь
+          li
+            a(href='*') Вакансии
+          li
+            a(href='*') Новости
+          li
+            a(href='*') Соглашения
+            ul
+              li
+                a(href='*') Подбор
+              li
+                a(href='*') Бронь
+    div.header__btns
+      button.violetborder Войти
+      button.violetback Зарегистрироваться
