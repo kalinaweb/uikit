@@ -37,6 +37,8 @@ body {
   background: $sidebar;
   font-family: $basefont2;
   margin: 0;
+  padding: 0;
+  height: 100%;
   overflow-x: hidden;
   color: $dark_shade75;
   font-weight: normal;
@@ -44,13 +46,29 @@ body {
 
 html {
   position: relative;
-  min-height: 100%;
+  height: 100%;
+}
+#main {
+  min-height: 1343px;;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 .wrap {
   width: 1440px;
   margin: auto;
   padding: 0 $wrap_padding 0 $wrap_padding;
   box-sizing: border-box;
+}
+.content {
+  flex: auto;
+  width: 100%;
+
+}
+.content.index {
+  background: url(../img/back_index.jpg);
+  background-size: cover;
 }
 h1,
 h2,
@@ -89,19 +107,23 @@ button {
   line-height: 15px;
   text-transform: uppercase;
   border-radius: 22px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.5;
 }
 button.violetborder {
   color: $violet;
   background: $basecolor;
-  border: 1px solid $violet;
-  padding: 7px 20px 8px 19px;
-  letter-spacing: -0.5px;
+  border: 2px solid $violet;
+  padding: 7px 20px 8px 17px;
+  letter-spacing: -0.1px;
 }
-
 button.violetback {
   color: $basecolor;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, $violet 0%, $blue 100%);
   border: 0px;
-  padding: 9px 20px 10px 20px;
+  padding: 9px 21px 10px 20px;
   letter-spacing: 0.1px;
 }
+

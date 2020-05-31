@@ -1,52 +1,46 @@
 @import "variables";
 
-header {
+footer {
   width: 100%;
-  height: 70px;
-  background: #FFFFFF;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  height: 372px;
+  background: $basecolor;
+  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+  box-sizing: border-box;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-header .wrap {
+footer .wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
 }
-.header__logo {
+.footer__logo {
   width: 106px;
   height: 40px;
 }
-.header__btns {
-  width: 466px;
-  height: 34px;
-  flex: 0 1 auto;
-}
-.header__btns .violetborder {
-  margin-right: 15px;
-}
 
-/*TopMenu start*/
-.header__topMenu {
+/*BottomMenu start*/
+.footer__menu {
   height: 40px;
   flex: 0 1 auto;
   width: 100%;
 }
-.header__topMenu nav {
+.footer__menu nav {
   margin-top: 12px;
   float: right;
 }
-.header__topMenu nav:after {
+.footer__menu nav:after {
   content:"";
   display:table;
   clear:both;
 }
-.header__topMenu nav ul {
+.footer__menu nav ul {
   padding:0;
   margin:0;
   list-style: none;
   position: relative;
 }
-.header__topMenu nav ul li {
+.footer__menu nav ul li {
   margin: 0px;
   display:inline-block;
   float: left;
@@ -54,7 +48,7 @@ header .wrap {
   margin-right: 1px;
   height: 43px;
 }
-.header__topMenu nav ul li:last-child {
+.footer__menu nav ul li:last-child {
   margin-right: 36px;
 }
 .header__topMenu nav ul li:nth-child(2) {
@@ -69,20 +63,20 @@ header .wrap {
   text-decoration:none;
   font-family: Montserrat;
 }
-.header__topMenu nav ul li ul li:hover { background: #ffffff; }
-.header__topMenu nav a:hover {
+.footer__menu nav ul li ul li:hover { background: #ffffff; }
+.footer__menu nav a:hover {
   color: $dark_shade75;
 }
-.header__topMenu nav ul ul {
+.footer__menu nav ul ul {
   display: none;
   position: absolute;
   margin-top: 25px;
   box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.2);
 }
-.header__topMenu nav ul li:hover > ul {
+.footer__menu nav ul li:hover > ul {
   display:inherit;
 }
-.header__topMenu nav ul ul li {
+.footer__menu nav ul ul li {
   min-width:100px;
   float:none;
   display:list-item;
@@ -90,24 +84,13 @@ header .wrap {
   border-bottom: 1px solid $dark_shade25;
   line-height: 44px;
 }
-.header__topMenu nav ul ul li:last-child {
+.footer__menu nav ul ul li:last-child {
   border-bottom: 0;
 }
-.header__topMenu nav ul ul ul {
+.footer__menu nav ul ul ul {
   position: absolute;
   top:0;
   left:100%;
 }
-.header__topMenu li > a:after {
-  content:  'keyboard_arrow_down';
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 20px;
-  top: 0px;
-  position: absolute;
-}
-.header__topMenu li > a:only-child:after { content: ''; }
-/*TopMenu stop*/
+/*BottomMenu stop*/
 
