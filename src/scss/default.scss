@@ -7,8 +7,8 @@
 
 @font-face {
   font-family: 'Quicksand-Regular';
-  src: url('fonts/Quicksand-Regular.eot');
-  src: local('☺'), url('fonts/Quicksand-Regular.woff') format('woff'), url('fonts/Quicksand-Regular.ttf') format('truetype'), url('fonts/Quicksand-Regular.svg') format('svg');
+  src: url('fonts/quicksand_regular.eot');
+  src: local('☺'), url('fonts/quicksand_regular.woff') format('woff'), url('fonts/quicksand_regular.ttf') format('truetype'), url('fonts/quicksand_regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -57,6 +57,7 @@ html {
   flex-direction: column;
 }
 .wrap {
+  position: relative;
   width: 1440px;
   margin: auto;
   padding: 0 $wrap_padding 0 $wrap_padding;
@@ -79,9 +80,11 @@ h3
   font-weight: bold;
 }
 h1 {
-  font-family: $basefont1;
+  font-family: Arial;
   line-height: 30px;
   font-size: $font_size_bigger;
+  letter-spacing: 1.1px;
+  margin-bottom: 7px;
 }
 h2 {
   font-family: $basefont1;
@@ -93,6 +96,7 @@ h3 {
   line-height: 15px;
   font-size: $font_size_small;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 p {
   font-family: $basefont2;
@@ -112,6 +116,7 @@ button {
   text-transform: uppercase;
   border-radius: 22px;
   cursor: pointer;
+  position: relative;
 }
 button:hover {
   opacity: 0.5;
@@ -130,12 +135,29 @@ button.violetborder {
 button.violetback {
   color: $basecolor;
   background: linear-gradient(180deg, $violet 0%, $blue 100%);
-  border: 0px;
+  border: none;
   padding: 9px 21px 10px 20px;
   letter-spacing: 0.1px;
 }
+button.violetback.arrow {
+  line-height: 25px;
+  text-transform: uppercase;
+}
+button.violetback.arrow:after {
+  content:  'arrow_forward';
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 20px;
+  top: 12px;
+  right: 10px;
+  position: absolute;
+  text-transform: none;
+}
 input {
-  font-family: Montserrat;
+  width: 100%;
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: normal;
   font-size: $font_size_md;
@@ -150,4 +172,13 @@ input {
 input:hover, input:focus {
   border: 1px solid $dark_shade50;
   color: $dark_shade75;
+}
+.inline {
+  display: inline-block;
+}
+.width100 {
+  width: 100%;
+}
+.width50 {
+  width: 49.4%;
 }
