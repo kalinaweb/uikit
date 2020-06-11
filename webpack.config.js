@@ -1,10 +1,12 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: [
         './src/js/index.js',
+        './src/js/finding.js',
         './src/scss/style.scss',
     ],
     output: {
@@ -53,6 +55,11 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        alias: {
+            jquery: path.resolve(__dirname, 'dist/js/jquery-3.5.1.min.js')
+        }
+    },
     plugins: [
         new ExtractTextPlugin({
             filename: './css/style.bundle.css',
@@ -61,6 +68,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/html/index.pug',
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         })
     ]
 };
