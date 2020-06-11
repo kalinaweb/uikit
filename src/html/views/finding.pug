@@ -2,11 +2,40 @@ div.finding
   h1 Найдём номера под <br>ваши пожелания
   div.finding__left.inline.width50
     h3 Прибытие
-    input
+    div.input-arrow
+      input#arrive(value='ДД.ММ.ГГГГ')
+      label(for="arrive") &nbsp;
   div.finding__right.inline.width50
     h3 Выезд
-    input
+    div.input-arrow
+      input#departure(value='ДД.ММ.ГГГГ')
+      label(for="departure") &nbsp;
   div.finding__guests
     h3 Гости
-    input
+    div.select-count
+      div.input-arrow
+        input#guests(readonly value='Сколько гостей')
+        label(for="guests") &nbsp;
+      div.select-count__container
+        div.select-count__item
+          h3 Взрослые
+          div.select-count__count-area
+            span.select-count__control -
+            span.select-count__number 2
+            span.select-count__control +
+        div.select-count__item
+          h3 Дети
+          div.select-count__count-area
+            span.select-count__control -
+            span.select-count__number 1
+            span.select-count__control +
+        div.select-count__item
+          h3 Младенцы
+          div.select-count__count-area
+            span.select-count__control.transparent -
+            span.select-count__number 0
+            span.select-count__control +
+        div.select-count__buttons
+          span очистить
+          div.select-count__apply применить
   button.violetback.arrow.width100 подобрать номер

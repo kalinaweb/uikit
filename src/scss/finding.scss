@@ -11,6 +11,21 @@
   border-radius: 4px;
   padding: 24px 30px 30px 30px;
 }
+.finding input + label {
+  position: relative;
+  width: 0px;
+}
+.finding input + label:after {
+  content:  'keyboard_arrow_down';
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 20px;
+  top: 14px;
+  right: 10px;
+  position: absolute;
+}
 .finding__left {
   padding-right: 7px;
   box-sizing: border-box;
@@ -23,3 +38,87 @@
   margin-top: 20px;
   margin-bottom: 32px;
 }
+.select-count {
+   position: relative;
+ }
+.select-count.active input {
+  @extend input:focus;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+.select-count__container {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 43px;
+  width: 100%;
+  z-index: 999;
+  padding-left: 14px;
+  padding-right: 7px;
+  background: $basecolor;
+  border: 1px solid $dark_shade50;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px $dark_shade5;
+  border-radius: 0 0 4px 4px;
+}
+.select-count.active .select-count__container {
+  display: block;
+}
+.select-count__item {
+  position: relative;
+  margin-bottom: 22px;
+}
+.select-count__count-area {
+  position: absolute;
+  right: -1px;
+  top: -7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 92px;
+}
+.select-count__control {
+  width: 30px;
+  height: 30px;
+  border: 1px solid $dark_shade50;
+  border-radius: 50%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 3px;
+}
+.select-count__number {
+  @extend h3;
+  flex: auto;
+  text-align: center;
+  padding-top: 3px;
+}
+.select-count__buttons {
+  @extend .select-count__item;
+  margin-bottom: 11px;
+}
+.select-count__buttons span {
+  display: block;
+  padding-top: 5px;
+  margin-left: -2px;
+  letter-spacing: 0.6px;
+  color: $dark_shade50;
+  cursor: pointer;
+}
+.select-count__apply {
+  @extend .select-count__count-area;
+  top: 5px;
+  right: -10px;
+  color: $violet;
+  cursor: pointer;
+}
+.input-arrow {
+  display: flex;
+}
+
+
+
