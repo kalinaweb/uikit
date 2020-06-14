@@ -17,25 +17,25 @@ div.finding
         input#guests(readonly value='Сколько гостей')
         label(for="guests") &nbsp;
       div.select-count__container
-        div.select-count__item
+        div.select-count__item.fadeIn.a2
           h3 Взрослые
           div.select-count__count-area
-            span.select-count__control -
-            span.select-count__number 2
-            span.select-count__control +
-        div.select-count__item
+            span.select-count__control.js_minus.transparent -
+            span.select-count__number.js_num 0
+            span.select-count__control.js_plus +
+        div.select-count__item.fadeIn.a4
           h3 Дети
           div.select-count__count-area
-            span.select-count__control -
-            span.select-count__number 1
-            span.select-count__control +
-        div.select-count__item
+            span.select-count__control.js_minus.transparent -
+            span.select-count__number.js_num 0
+            span.select-count__control.js_plus +
+        div.select-count__item.fadeIn.a6
           h3 Младенцы
           div.select-count__count-area
-            span.select-count__control.transparent -
-            span.select-count__number 0
-            span.select-count__control +
-        div.select-count__buttons
-          span очистить
-          div.select-count__apply применить
+            span.select-count__control.js_minus.transparent -
+            span.select-count__number.js_num 0
+            span.select-count__control.js_plus +
+        div.select-count__buttons.fadeIn.a8
+          span.js_clearGuests.transparent очистить
+          div.select-count__apply.js_applyGuests применить
   button.violetback.arrow.width100 подобрать номер
