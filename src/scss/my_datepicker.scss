@@ -1,0 +1,123 @@
+@import "variables";
+
+.datepicker {
+  background: $basecolor;
+  border: 1px solid $dark_shade25;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px $dark_shade5;
+  border-radius: 4px;
+  font-family: $basefont2;
+  font-size: $font_size_small;
+  color: $dark_shade50;
+  width: 320px;
+}
+.datepicker--day-name {
+  color: $violet;
+  text-transform: none;
+  font-size: $font_size_small;
+  font-weight: bold;
+}
+.datepicker--pointer {
+  display: none;
+}
+.datepicker--cell.-current- {
+  color: #ffffff;
+  background: linear-gradient(180deg, $green 0%, $lightblue 100%);
+  border-radius: 50%;
+}
+.datepicker--content {
+  padding: 20px;
+  padding-bottom: 14px;
+}
+.datepicker--cell {
+  height: 41px;
+}
+.datepicker--nav-title {
+  font-family: $basefont1;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $font_size_big;
+  line-height: 24px;
+  color: $dark_shade;
+}
+.datepicker--nav {
+  min-height: 49px;
+  border-bottom: none;
+}
+.datepicker--nav-title {
+  padding-top: 6px;
+  letter-spacing: 0.1px;
+}
+.datepicker--nav-action span {
+  color: $violet;
+}
+.datepicker--cell.-selected- {
+  position: relative;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 50%;
+}
+.datepicker--cell.-in-range- {
+  background: none;
+  border-radius: 0;
+  border: none;
+}
+.datepicker--cell.-in-range-:after {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  opacity: 0.25;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  height: 40px;
+}
+.datepicker--cell.-selected-.-range-from-:after {
+  content: " ";
+  position: absolute;
+  left: 20px;
+  width: 50%;
+  opacity: 0.25;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  height: 40px;
+}
+.datepicker--cell.-selected-.-range-to-:after {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  width: 50%;
+  opacity: 0.25;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  height: 40px;
+}
+.datepicker--buttons div {
+  position: absolute;
+  right: 20px;
+  top: 4px;
+  cursor: pointer;
+}
+.datepicker--buttons {
+  height: 30px;
+  border-top: none;
+  position: relative;
+}
+.datepicker--button {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 20px;
+  width: max-content;
+}
+.datepicker--button:hover {
+  background: none;
+}
+.datepicker--nav-action {
+  margin-left: 12px;
+  margin-top: 2px;
+  margin-right: 10px;
+}
+.datepicker--days-names {
+  margin-bottom: 10px;
+}

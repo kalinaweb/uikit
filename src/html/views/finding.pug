@@ -3,13 +3,15 @@ div.finding
   div.finding__left.inline.width50
     h3 Прибытие
     div.input-arrow
-      input#arrive(value='ДД.ММ.ГГГГ')
+      input#arrive.js_arriveFinding(value='ДД.ММ.ГГГГ')
       label(for="arrive") &nbsp;
   div.finding__right.inline.width50
     h3 Выезд
     div.input-arrow
-      input#departure(value='ДД.ММ.ГГГГ')
+      input#departure.js_arriveDeparture(value='ДД.ММ.ГГГГ')
       label(for="departure") &nbsp;
+  div
+    input.js_dateFromDatepicker.zero
   div.finding__guests
     h3 Гости
     div.select-count
@@ -39,3 +41,4 @@ div.finding
           span.js_clearGuests.transparent очистить
           div.select-count__apply.js_applyGuests применить
   button.violetback.arrow.width100 подобрать номер
+
