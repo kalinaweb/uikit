@@ -30,10 +30,10 @@
     myDatepicker.show();
   });
 
-  /*$("#arrive").change(function() {
-    let newDate = new Date($(this).val().replace(/(\d+).(\d+).(\d+)/, '$3/$2/$1');
-    myDatepicker.selectDate(newDate);
-  });*/
+  $(".datepicker").click(function() {
+    $("#arrive").addClass('active');
+    $("#departure").addClass('active');
+  });
 
   $(".js_applyDatePicker").click(function() {
     myDatepicker.hide();

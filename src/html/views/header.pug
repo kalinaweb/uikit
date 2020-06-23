@@ -6,6 +6,10 @@ header
         img(src='img/logo.png')
     div.header__topMenu
       nav
+        input(type='checkbox' name='toggle' id='menu' class='toggleMenu')
+        label(for='menu' class='toggleMenu')
+          span.material-icons.open menu
+          span.material-icons.close close
         ul
           li
             a(href='*') О нас

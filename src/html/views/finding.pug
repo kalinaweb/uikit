@@ -3,14 +3,14 @@ div.finding
   div.finding__left.inline.width50
     h3 Прибытие
     div.input-arrow
-      input#arrive.js_arriveFinding(value='ДД.ММ.ГГГГ')
+      input#arrive.js_arriveFinding(value='ДД.ММ.ГГГГ' readonly)
       label(for="arrive") &nbsp;
   div.finding__right.inline.width50
     h3 Выезд
     div.input-arrow
-      input#departure.js_arriveDeparture(value='ДД.ММ.ГГГГ')
+      input#departure.js_arriveDeparture(value='ДД.ММ.ГГГГ' readonly)
       label(for="departure") &nbsp;
-  div
+  div.height0
     input.js_dateFromDatepicker.zero
   div.finding__guests
     h3 Гости

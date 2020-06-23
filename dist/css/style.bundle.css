@@ -35,11 +35,13 @@ body {
   overflow-x: hidden;
   color: rgba(31, 32, 65, 0.75);
   font-weight: normal;
-  font-size: 14px; }
+  font-size: 14px;
+  min-width: 320px; }
 
 html {
   position: relative;
-  height: 100%; }
+  height: 100%;
+  min-width: 320px; }
 
 #main {
   min-height: 1343px;
@@ -61,7 +63,7 @@ html {
 
 .content.index {
   background: url(../img/back_index.jpg);
-  background-position-y: -70px;
+  background-size: cover;
   position: relative; }
 
 .index__slogan {
@@ -171,7 +173,7 @@ input {
   border-radius: 4px;
   padding: 10px 44px 8px 15px; }
 
-input:hover, input:focus, .select-count.active input {
+input:hover, input:focus, .select-count.active input, input.active {
   border: 1px solid rgba(31, 32, 65, 0.5);
   color: rgba(31, 32, 65, 0.75); }
 
@@ -183,6 +185,9 @@ input:hover, input:focus, .select-count.active input {
 
 .width50 {
   width: 49.4%; }
+
+.height0 {
+  height: 0px; }
 
 .hidden {
   display: none !important; }
@@ -197,6 +202,9 @@ input:hover, input:focus, .select-count.active input {
   padding: 0;
   margin: 0;
   border: 0; }
+
+.flexWrap {
+  flex-wrap: wrap; }
 
 /*Текстовые стили*/
 .clearBtnStyle {
@@ -356,7 +364,8 @@ header .wrap {
 .header__topMenu {
   height: 40px;
   flex: 0 1 auto;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .header__topMenu nav {
   margin-top: 12px;
@@ -443,6 +452,39 @@ header .wrap {
   content: ''; }
 
 /*TopMenu stop*/
+/*TopMenu mobile start*/
+.header__topMenu [type="checkbox"], .header__topMenu label.toggleMenu {
+  display: none; }
+
+.header__topMenu label.toggleMenu {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  right: 20px;
+  top: 1px; }
+
+.header__topMenu label.toggleMenu span {
+  font-size: 38px;
+  color: rgba(31, 32, 65, 0.75); }
+
+input.toggleMenu:checked + label.toggleMenu span.close, label.toggleMenu span.open {
+  display: block; }
+
+label.toggleMenu span.close, input.toggleMenu:checked + label.toggleMenu span.open {
+  display: none; }
+
+input.toggleMenu:checked ~ ul,
+input.toggleSubmenu:checked ~ ul {
+  display: block;
+  position: relative;
+  max-height: 5000px;
+  transition: max-height 2s ease-in; }
+
+input.toggleSubmenu:checked ~ ul {
+  margin-left: -10px;
+  padding-bottom: 20px; }
+
+/*TopMenu mobile stop*/
 /*'Quicksand-Regular'*/
 footer {
   width: 100%;
@@ -790,5 +832,121 @@ copyright i.fa {
 
 .datepicker--days-names {
   margin-bottom: 10px; }
+
+@media (min-width: 1440px) and (max-width: 1440px) {
+  .content.index {
+    background-position-y: -70px;
+    background-size: unset; } }
+
+@media (max-width: 1439px) {
+  .wrap {
+    width: 100%;
+    padding: 0 70px 0 70px; }
+  .header__btns {
+    min-width: 301px; }
+  .finding {
+    left: 70px; }
+  .index__slogan {
+    right: 70px; } }
+
+@media (max-width: 1152px) {
+  .wrap {
+    padding: 0 20px 0 20px; }
+  .finding {
+    left: 20px; }
+  .index__slogan {
+    right: 20px; } }
+
+@media (max-width: 960px) {
+  header button.violetback {
+    display: none; }
+  .header__btns .violetborder {
+    margin-right: 0px; }
+  .header__btns {
+    min-width: 90px;
+    width: 90px; } }
+
+@media (max-width: 800px) {
+  .header__topMenu label.toggleMenu {
+    display: block; }
+  .header__topMenu nav {
+    overflow: hidden;
+    padding-right: 20px;
+    display: block;
+    background: #ffffff;
+    padding-left: 20px;
+    /*margin-top: -40px;*/ }
+  .header__topMenu nav ul {
+    display: block;
+    max-height: 0;
+    transition: max-height 0.3s;
+    margin-top: 43px;
+    z-index: 9999;
+    background: #ffffff;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2); }
+  .header__topMenu nav ul li {
+    display: block;
+    float: none;
+    position: relative; }
+  .header__topMenu nav ul li ul {
+    display: block;
+    margin-top: 0px; }
+  .header__topMenu nav ul ul li {
+    border-bottom: none;
+    line-height: 22px;
+    height: 22px;
+    padding-left: 15px;
+    box-sizing: border-box; }
+  .header__topMenu nav > ul > li:nth-child(2), .header__topMenu nav > ul > li:nth-child(5) {
+    height: 90px; }
+  .header__topMenu nav > ul > li > a {
+    line-height: 43px; }
+  .header__topMenu li > a:after {
+    top: 12px; }
+  footer {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+  footer .wrap {
+    flex-wrap: wrap; }
+  .footer__subscribe {
+    width: 100%; }
+  .footer__logo {
+    width: 100%; }
+  .footer__menu {
+    flex: none;
+    width: 30%; } }
+
+@media (max-width: 440px) {
+  .finding {
+    width: 90%; }
+  .finding .width50 {
+    width: 48.4%; }
+  .footer__logo {
+    margin-bottom: 20px; }
+  copyright {
+    font-size: 12px; }
+  copyright a {
+    width: 30px; }
+  .header__topMenu {
+    width: 50px; }
+  .header__topMenu nav {
+    background: none; }
+  input.toggleMenu:checked ~ ul,
+  input.toggleSubmenu:checked ~ ul {
+    width: 173px; } }
+
+@media (max-width: 387px) {
+  .footer__menu {
+    width: 100%; }
+  .content {
+    height: 600px; }
+  h1 {
+    line-height: 24px;
+    font-size: 19px; }
+  .datepicker {
+    width: 270px; }
+  .datepicker--cell.-selected-.-range-from-:after {
+    width: 40%; } }
 
 /*# sourceMappingURL=style.bundle.css.map*/

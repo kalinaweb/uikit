@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link href="./css/datepicker.css" rel="stylesheet">
   <link href="./css/style.bundle.css" rel="stylesheet"></head>
@@ -12,6 +13,8 @@
     <div class="header__logo"><a href="index.html"><img src="img/logo.png"></a></div>
     <div class="header__topMenu">
       <nav>
+        <input class="toggleMenu" type="checkbox" name="toggle" id="menu">
+        <label class="toggleMenu" for="menu"><span class="material-icons open">menu</span><span class="material-icons close">close</span></label>
         <ul>
           <li><a href="*">О нас</a></li>
           <li><a href="*">Услуги</a>
@@ -44,18 +47,18 @@
   <div class="finding__left inline width50">
     <h3>Прибытие</h3>
     <div class="input-arrow">
-      <input class="js_arriveFinding" id="arrive" value="ДД.ММ.ГГГГ">
+      <input class="js_arriveFinding" id="arrive" value="ДД.ММ.ГГГГ" readonly>
       <label for="arrive">&nbsp;</label>
     </div>
   </div>
   <div class="finding__right inline width50">
     <h3>Выезд</h3>
     <div class="input-arrow">
-      <input class="js_arriveDeparture" id="departure" value="ДД.ММ.ГГГГ">
+      <input class="js_arriveDeparture" id="departure" value="ДД.ММ.ГГГГ" readonly>
       <label for="departure">&nbsp;</label>
     </div>
   </div>
-  <div>
+  <div class="height0">
     <input class="js_dateFromDatepicker zero">
   </div>
   <div class="finding__guests">
@@ -165,10 +168,10 @@
     myDatepicker.show();
   });
 
-  /*$("#arrive").change(function() {
-    let newDate = new Date($(this).val().replace(/(\d+).(\d+).(\d+)/, '$3/$2/$1');
-    myDatepicker.selectDate(newDate);
-  });*/
+  $(".datepicker").click(function() {
+    $("#arrive").addClass('active');
+    $("#departure").addClass('active');
+  });
 
   $(".js_applyDatePicker").click(function() {
     myDatepicker.hide();
