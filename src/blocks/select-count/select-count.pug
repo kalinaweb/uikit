@@ -1,0 +1,52 @@
+mixin select-count(id, value, options, showBtn, mods)
+
+  //- Принимает:
+  //-   id  {string} - id input
+  //-   value  {string} - значение input
+  //-   options {array}
+    //-     {object}
+    //-       title: ''     {string} - текст пункта
+  //-   showBtn  {bool} - показывать кнопки Очистить и Применить
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +select-count(
+              'guests',
+              'Сколько гостей',
+              [
+                {
+                  title: 'Взрослые'
+                },
+                {
+                  title: 'Дети'
+                },
+                {
+                  title: 'Младенцы'
+                },
+              ],
+              true
+              )
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ' + modsList[i].trim();
+      }
+    }
+
+  div.select-count
+        +input-arrow(id, value)
+        div.select-count__container
+          each option in options
+            div.select-count__item.fadeIn.a2
+              h3= option.title
+              div.select-count__count-area
+                span.select-count__control.js_minus.transparent -
+                span.select-count__number.js_num 0
+                span.select-count__control.js_plus +
+          if(showBtn)
+            div.select-count__buttons.fadeIn.a8
+              span.js_clearSelectCount.transparent очистить
+              div.select-count__apply.js_applySelectCount применить

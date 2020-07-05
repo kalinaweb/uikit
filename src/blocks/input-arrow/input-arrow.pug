@@ -1,0 +1,30 @@
+mixin input-arrow(id, value, inputClasses, mods)
+
+  //- Принимает:
+  //-   id  {string} - id input
+  //-   value  {string} - значение input
+  //-   inputClasses  {string} - список модификаторов для input
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +input-arrow('guests', 'Сколько гостей')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    var allInputClasses = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ' + modsList[i].trim();
+      }
+    }
+    if(typeof(inputClasses) !== 'undefined' && inputClasses) {
+      var classesList = inputClasses.split(',');
+      for (var i = 0; i < classesList.length; i++) {
+        allInputClasses = allInputClasses + ' ' + classesList[i].trim();
+      }
+    }
+
+  div.input-arrow
+    input(id=id class=allInputClasses readonly value=value)
+    label(for=id) &nbsp;

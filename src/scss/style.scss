@@ -1,9 +1,13 @@
 @import "variables";
 @import "default";
-@import "header";
-@import "footer";
+@import "../blocks/header/header";
+@import "../blocks/footer/footer";
+@import "../blocks/btn/btn";
+@import "../blocks/input-arrow/input-arrow";
+@import "../blocks/select-count/select-count";
+@import "../blocks/burger/burger";
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
-@import "finding";
+@import "../blocks/finding/finding";
 @import "my_datepicker";
 @import "resize";

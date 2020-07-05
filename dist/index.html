@@ -8,93 +8,95 @@
   <link href="./css/style.bundle.css" rel="stylesheet"></head>
   <body>
     <div id="main">
-<header>
-  <div class="wrap">
-    <div class="header__logo"><a href="index.html"><img src="img/logo.png"></a></div>
-    <div class="header__topMenu">
-      <nav>
-        <input class="toggleMenu" type="checkbox" name="toggle" id="menu">
-        <label class="toggleMenu" for="menu"><span class="material-icons open">menu</span><span class="material-icons close">close</span></label>
-        <ul>
-          <li><a href="*">О нас</a></li>
-          <li><a href="*">Услуги</a>
-            <ul>
-              <li><a href="*">Подбор</a></li>
-              <li><a href="*">Бронь</a></li>
-            </ul>
-          </li>
-          <li><a href="*">Вакансии</a></li>
-          <li><a href="*">Новости</a></li>
-          <li><a href="*">Соглашения</a>
-            <ul>
-              <li><a href="*">Подбор</a></li>
-              <li><a href="*">Бронь</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__btns">
-      <button class="violetborder">Войти</button>
-      <button class="violetback">Зарегистрироваться</button>
-    </div>
-  </div>
-</header>
+      <header>
+        <div class="wrap">
+          <div class="header__logo"><a href="index.html"><img src="img/logo.png"></a>
+          </div>
+          <div class="header__topMenu">
+            <nav>
+              <input class="burger toggleMenu" type="checkbox" name="toggle" id="menu">
+              <label class="burger toggleMenu" for="menu"><span class="material-icons burger__open">menu</span><span class="material-icons burger__close">close</span></label>
+              <ul>
+                <!--each menuItem in mainMenu
+                +main-nav-item(selectedID, menuItem, 1)
+                  if (typeof(menuItem.childs) !== 'undefined' && menuItem.childs)
+                    +main-nav-sublist-wrapper(2)
+                      each menuItem2 in menuItem.childs
+                        +main-nav-item(selectedID, menuItem2, 2)
+                          if (typeof(menuItem2.childs) !== 'undefined' && menuItem2.childs)
+                            +main-nav-sublist-wrapper(3)
+                              each menuItem3 in menuItem2.childs
+                                +main-nav-item(selectedID, menuItem3, 3)
+                
+                -->
+              </ul>
+            </nav>
+          </div>
+          <div class="header__btns">
+            <button class="btn  btn__violetborder m-r15">Войти
+            </button>
+            <button class="btn  btn__violetback">Зарегистрироваться
+            </button>
+          </div>
+        </div>
+      </header>
       <div class="content index">
         <div class="wrap">
-<div class="finding">
-  <h1>Найдём номера под <br>ваши пожелания</h1>
-  <div class="finding__left inline width50">
-    <h3>Прибытие</h3>
-    <div class="input-arrow">
-      <input class="js_arriveFinding" id="arrive" value="ДД.ММ.ГГГГ" readonly>
-      <label for="arrive">&nbsp;</label>
-    </div>
-  </div>
-  <div class="finding__right inline width50">
-    <h3>Выезд</h3>
-    <div class="input-arrow">
-      <input class="js_arriveDeparture" id="departure" value="ДД.ММ.ГГГГ" readonly>
-      <label for="departure">&nbsp;</label>
-    </div>
-  </div>
-  <div class="height0">
-    <input class="js_dateFromDatepicker zero">
-  </div>
-  <div class="finding__guests">
-    <h3>Гости</h3>
-    <div class="select-count">
-      <div class="input-arrow">
-        <input id="guests" readonly value="Сколько гостей">
-        <label for="guests">&nbsp;</label>
-      </div>
-      <div class="select-count__container">
-        <div class="select-count__item fadeIn a2">
-          <h3>Взрослые</h3>
-          <div class="select-count__count-area"><span class="select-count__control js_minus transparent">-</span><span class="select-count__number js_num">0</span><span class="select-count__control js_plus">+</span></div>
-        </div>
-        <div class="select-count__item fadeIn a4">
-          <h3>Дети</h3>
-          <div class="select-count__count-area"><span class="select-count__control js_minus transparent">-</span><span class="select-count__number js_num">0</span><span class="select-count__control js_plus">+</span></div>
-        </div>
-        <div class="select-count__item fadeIn a6">
-          <h3>Младенцы</h3>
-          <div class="select-count__count-area"><span class="select-count__control js_minus transparent">-</span><span class="select-count__number js_num">0</span><span class="select-count__control js_plus">+</span></div>
-        </div>
-        <div class="select-count__buttons fadeIn a8"><span class="js_clearGuests transparent">очистить</span>
-          <div class="select-count__apply js_applyGuests">применить</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <button class="violetback arrow width100">подобрать номер</button>
-</div>
+          <div class="finding">
+            <h1>Найдём номера под <br>ваши пожелания</h1>
+            <div class="finding__left inline width50">
+              <h3>Прибытие</h3>
+              <div class="input-arrow">
+                <input class=" js_arriveFinding" id="arrive" readonly value="ДД.ММ.ГГГГ">
+                <label for="arrive">&nbsp;</label>
+              </div>
+            </div>
+            <div class="finding__right inline width50">
+              <h3>Выезд</h3>
+              <div class="input-arrow">
+                <input class=" js_arriveDeparture" id="departure" readonly value="ДД.ММ.ГГГГ">
+                <label for="departure">&nbsp;</label>
+              </div>
+            </div>
+            <div class="height0">
+              <input class="js_dateFromDatepicker zero">
+            </div>
+            <div class="finding__guests">
+              <h3>Гости</h3>
+              <div class="select-count">
+                <div class="input-arrow">
+                  <input id="guests" readonly value="Сколько гостей">
+                  <label for="guests">&nbsp;</label>
+                </div>
+                <div class="select-count__container">
+                  <div class="select-count__item fadeIn a2">
+                    <h3>Взрослые</h3>
+                    <div class="select-count__count-area"><span class="select-count__control js_minus transparent">-</span><span class="select-count__number js_num">0</span><span class="select-count__control js_plus">+</span></div>
+                  </div>
+                  <div class="select-count__item fadeIn a2">
+                    <h3>Дети</h3>
+                    <div class="select-count__count-area"><span class="select-count__control js_minus transparent">-</span><span class="select-count__number js_num">0</span><span class="select-count__control js_plus">+</span></div>
+                  </div>
+                  <div class="select-count__item fadeIn a2">
+                    <h3>Младенцы</h3>
+                    <div class="select-count__count-area"><span class="select-count__control js_minus transparent">-</span><span class="select-count__number js_num">0</span><span class="select-count__control js_plus">+</span></div>
+                  </div>
+                  <div class="select-count__buttons fadeIn a8"><span class="js_clearSelectCount transparent">очистить</span>
+                    <div class="select-count__apply js_applySelectCount">применить</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn  btn__violetback arrow width100">подобрать номер
+            </button>
+          </div>
         </div>
         <div class="index__slogan">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
       </div>
       <footer>
         <div class="wrap">
-          <div class="footer__logo"><a href="index.html"><img src="img/logo.png"></a><span>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации&nbsp;&laquo;Отельные взгляды&raquo;</span></div>
+          <div class="footer__logo"><a href="index.html"><img src="img/logo.png"></a><span>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации&nbsp;&laquo;Отельные взгляды&raquo;</span>
+          </div>
           <div class="footer__menu">
             <h3>Навигация</h3>
             <ul>

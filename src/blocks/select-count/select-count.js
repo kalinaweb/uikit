@@ -2,20 +2,21 @@
 
     let $valueMinus = $(".js_minus"); /*Кнопка минус*/
     let $valuePlus = $(".js_plus"); /*Кнопка плюс*/
-    let $numTypeCuests = $(".js_num"); /*Кнопка плюс*/
-    let $inputGuests = $("#guests"); /*Поле Гости*/
-    let $clearGuests = $(".js_clearGuests"); /*Кнопка очистить в форме Гости*/
-    let $applyGuests = $(".js_applyGuests"); /*Кнопка применить в форме Гости*/
+    let $numType = $(".js_num"); /*Количество*/
+    let $inputSelectCount = $(".select-count input"); /*Поле Input*/
+    let $clearSelectCount = $(".js_clearSelectCount"); /*Кнопка очистить*/
+    let $applySelectCount = $(".js_applySelectCount"); /*Кнопка применить*/
 
-    $applyGuests.click(function () {
+    $applySelectCount.click(function () {
         $(this).parents('.select-count__container').removeClass('pullDown').addClass('fadeOut');
         $('.select-count').removeClass('active');
     });
 
-    $clearGuests.click(function () {
-        $inputGuests.val('Сколько гостей');
+    $clearSelectCount.click(function () {
+        $inputSelectCount.val('Сколько гостей');
         $valueMinus.addClass('transparent');
-        $numTypeCuests.html(0);
+        $(this).addClass('transparent');
+        $numType.html(0);
     });
 
     $valuePlus.click(function () {
@@ -27,12 +28,12 @@
         $('.select-count__buttons span').removeClass('transparent');
 
         /*Подсчет числа гостей*/
-        let summ = parseFloat($inputGuests.val());
-        if($inputGuests.val() == 'Сколько гостей') {
+        let summ = parseFloat($inputSelectCount.val());
+        if($inputSelectCount.val() == 'Сколько гостей') {
             summ = 0;
         }
         summ++;
-        $inputGuests.val(summ + postFixForGuests(summ));
+        $inputSelectCount.val(summ + postFixForGuests(summ));
     });
 
     $valueMinus.click(function () {
@@ -47,13 +48,13 @@
         }
 
         /*Подсчет числа гостей*/
-        let summ = parseFloat($inputGuests.val());
+        let summ = parseFloat($inputSelectCount.val());
         summ--;
         if(summ == 0) {
-            $inputGuests.val('Сколько гостей');
+            $inputSelectCount.val('Сколько гостей');
             $('.select-count__buttons span').addClass('transparent');
         }
-        else $inputGuests.val(summ + postFixForGuests(summ));
+        else $inputSelectCount.val(summ + postFixForGuests(summ));
     });
 
     function postFixForGuests(number) {
@@ -74,7 +75,7 @@
     }
 
     /*Открытие выпадающего списка Гости*/
-    $("#guests").click(function() {
+    $inputSelectCount.click(function() {
         $(this).parents('.select-count').addClass('active');
         $(this).parents('.select-count').find('.select-count__container').removeClass('fadeOut').addClass('pullDown');
     });

@@ -118,53 +118,8 @@ p {
 .l-s03 {
   letter-spacing: 0.3px;
 }
-button {
-  font-family: $basefont2;
-  font-style: normal;
-  font-weight: bold;
-  font-size: $font_size_small;
-  line-height: 15px;
-  text-transform: uppercase;
-  border-radius: 22px;
-  cursor: pointer;
-  position: relative;
-}
-button:hover {
-  opacity: 0.5;
-}
-button.violetborder {
-  background: $basecolor;
-  border: 2px solid $violet;
-  padding: 7px 20px 8px 17px;
-  letter-spacing: -0.1px;
-  background-image: -webkit-linear-gradient(180deg, $violet 0%, $blue 100%);
-  background-image: linear-gradient(180deg, $violet 0%, $blue 100%);
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-button.violetback {
-  color: $basecolor;
-  background: linear-gradient(180deg, $violet 0%, $blue 100%);
-  border: none;
-  padding: 9px 21px 10px 20px;
-  letter-spacing: 0.1px;
-}
-button.violetback.arrow {
-  line-height: 25px;
-  text-transform: uppercase;
-}
-button.violetback.arrow:after {
-  content:  'arrow_forward';
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 20px;
-  top: 12px;
-  right: 10px;
-  position: absolute;
-  text-transform: none;
+.m-r15 {
+  margin-right: 15px;
 }
 input {
   width: 100%;
@@ -212,6 +167,9 @@ input:hover, input:focus, input.active {
 }
 .flexWrap {
   flex-wrap: wrap;
+}
+.relative {
+  position: relative;
 }
 
 

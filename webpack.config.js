@@ -6,7 +6,7 @@ const webpack = require('webpack');
 module.exports = {
     entry: [
         './src/js/index.js',
-        './src/js/finding.js',
+        './src/blocks/select-count/select-count.js',
         './src/scss/style.scss',
     ],
     output: {

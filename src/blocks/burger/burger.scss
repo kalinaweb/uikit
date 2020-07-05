@@ -1,0 +1,31 @@
+.burger[type="checkbox"], label.burger.toggleMenu {
+  display: none;
+}
+label.burger.toggleMenu {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  right: 20px;
+  top: 1px;
+}
+label.burger.toggleMenu span {
+  font-size: 38px;
+  color: $dark_shade75;
+}
+input.toggleMenu:checked + label.toggleMenu span.burger__close, label.toggleMenu span.burger__open {
+  display: block;
+}
+label.toggleMenu span.burger__close, input.toggleMenu:checked + label.toggleMenu span.burger__open {
+  display: none;
+}
+input.toggleMenu:checked ~ ul,
+input.toggleSubmenu:checked ~ ul{
+  display: block;
+  position: relative;
+  max-height: 5000px;
+  transition: max-height 2s ease-in;
+}
+/*input.toggleSubmenu:checked ~ ul {
+  margin-left: -10px;
+  padding-bottom: 20px;
+}*/

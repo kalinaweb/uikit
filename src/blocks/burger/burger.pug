@@ -1,0 +1,12 @@
+//- Все примеси в этом файле должны начинаться c имени блока (burger)
+
+mixin burger()
+
+  //- Принимает:
+  //- Вызов:
+        +burger()
+
+  input(type='checkbox' name='toggle' id='menu' class='burger toggleMenu')
+  label(for='menu' class='burger toggleMenu')
+    span.material-icons.burger__open menu
+    span.material-icons.burger__close close

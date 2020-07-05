@@ -1,0 +1,30 @@
+div.finding
+  h1 Найдём номера под <br>ваши пожелания
+  div.finding__left.inline.width50
+    h3 Прибытие
+    +input-arrow('arrive', 'ДД.ММ.ГГГГ', 'js_arriveFinding')
+  div.finding__right.inline.width50
+    h3 Выезд
+    +input-arrow('departure', 'ДД.ММ.ГГГГ', 'js_arriveDeparture')
+  div.height0
+    input.js_dateFromDatepicker.zero
+  div.finding__guests
+    h3 Гости
+    +select-count(
+      'guests',
+      'Сколько гостей',
+      [
+        {
+          title: 'Взрослые'
+        },
+        {
+          title: 'Дети'
+        },
+        {
+          title: 'Младенцы'
+        },
+      ],
+      true
+      )
+  +btn('подобрать номер', 'btn__violetback,arrow,width100')
+

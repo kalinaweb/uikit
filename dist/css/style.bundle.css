@@ -111,53 +111,8 @@ p {
 .l-s03 {
   letter-spacing: 0.3px; }
 
-button {
-  font-family: "montserrat";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  border-radius: 22px;
-  cursor: pointer;
-  position: relative; }
-
-button:hover {
-  opacity: 0.5; }
-
-button.violetborder {
-  background: #ffffff;
-  border: 2px solid #BC9CFF;
-  padding: 7px 20px 8px 17px;
-  letter-spacing: -0.1px;
-  background-image: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text; }
-
-button.violetback {
-  color: #ffffff;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border: none;
-  padding: 9px 21px 10px 20px;
-  letter-spacing: 0.1px; }
-
-button.violetback.arrow {
-  line-height: 25px;
-  text-transform: uppercase; }
-
-button.violetback.arrow:after {
-  content: 'arrow_forward';
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 20px;
-  top: 12px;
-  right: 10px;
-  position: absolute;
-  text-transform: none; }
+.m-r15 {
+  margin-right: 15px; }
 
 input {
   width: 100%;
@@ -205,6 +160,9 @@ input:hover, input:focus, .select-count.active input, input.active {
 
 .flexWrap {
   flex-wrap: wrap; }
+
+.relative {
+  position: relative; }
 
 /*Текстовые стили*/
 .clearBtnStyle {
@@ -452,39 +410,6 @@ header .wrap {
   content: ''; }
 
 /*TopMenu stop*/
-/*TopMenu mobile start*/
-.header__topMenu [type="checkbox"], .header__topMenu label.toggleMenu {
-  display: none; }
-
-.header__topMenu label.toggleMenu {
-  width: 38px;
-  height: 38px;
-  position: absolute;
-  right: 20px;
-  top: 1px; }
-
-.header__topMenu label.toggleMenu span {
-  font-size: 38px;
-  color: rgba(31, 32, 65, 0.75); }
-
-input.toggleMenu:checked + label.toggleMenu span.close, label.toggleMenu span.open {
-  display: block; }
-
-label.toggleMenu span.close, input.toggleMenu:checked + label.toggleMenu span.open {
-  display: none; }
-
-input.toggleMenu:checked ~ ul,
-input.toggleSubmenu:checked ~ ul {
-  display: block;
-  position: relative;
-  max-height: 5000px;
-  transition: max-height 2s ease-in; }
-
-input.toggleSubmenu:checked ~ ul {
-  margin-left: -10px;
-  padding-bottom: 20px; }
-
-/*TopMenu mobile stop*/
 /*'Quicksand-Regular'*/
 footer {
   width: 100%;
@@ -592,24 +517,62 @@ copyright i.fa {
   -webkit-background-clip: text;
   background-clip: text; }
 
-.finding {
-  position: absolute;
-  width: 380px;
-  height: 374px;
-  left: 140px;
-  top: 70px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 24px 30px 30px 30px; }
+button {
+  font-family: "montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  border-radius: 22px;
+  cursor: pointer;
+  position: relative; }
 
-.finding input + label {
+button:hover {
+  opacity: 0.5; }
+
+button.btn__violetborder {
+  background: #ffffff;
+  border: 2px solid #BC9CFF;
+  padding: 7px 20px 8px 17px;
+  letter-spacing: -0.1px;
+  background-image: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text; }
+
+button.btn__violetback {
+  color: #ffffff;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border: none;
+  padding: 9px 21px 10px 20px;
+  letter-spacing: 0.1px; }
+
+button.btn__violetback.arrow {
+  line-height: 25px;
+  text-transform: uppercase; }
+
+button.btn__violetback.arrow:after {
+  content: 'arrow_forward';
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 20px;
+  top: 12px;
+  right: 10px;
+  position: absolute;
+  text-transform: none; }
+
+.input-arrow {
+  display: flex; }
+
+.input-arrow label {
   position: relative;
   width: 0px; }
 
-.finding input + label:after {
+.input-arrow label:after {
   content: 'keyboard_arrow_down';
   font-family: 'Material Icons';
   font-style: normal;
@@ -619,18 +582,6 @@ copyright i.fa {
   top: 14px;
   right: 10px;
   position: absolute; }
-
-.finding__left {
-  padding-right: 7px;
-  box-sizing: border-box; }
-
-.finding__right {
-  padding-left: 7px;
-  box-sizing: border-box; }
-
-.finding__guests {
-  margin-top: 20px;
-  margin-bottom: 32px; }
 
 .select-count {
   position: relative; }
@@ -708,8 +659,61 @@ copyright i.fa {
   color: #BC9CFF;
   cursor: pointer; }
 
-.input-arrow {
-  display: flex; }
+.burger[type="checkbox"], label.burger.toggleMenu {
+  display: none; }
+
+label.burger.toggleMenu {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  right: 20px;
+  top: 1px; }
+
+label.burger.toggleMenu span {
+  font-size: 38px;
+  color: rgba(31, 32, 65, 0.75); }
+
+input.toggleMenu:checked + label.toggleMenu span.burger__close, label.toggleMenu span.burger__open {
+  display: block; }
+
+label.toggleMenu span.burger__close, input.toggleMenu:checked + label.toggleMenu span.burger__open {
+  display: none; }
+
+input.toggleMenu:checked ~ ul,
+input.toggleSubmenu:checked ~ ul {
+  display: block;
+  position: relative;
+  max-height: 5000px;
+  transition: max-height 2s ease-in; }
+
+/*input.toggleSubmenu:checked ~ ul {
+  margin-left: -10px;
+  padding-bottom: 20px;
+}*/
+.finding {
+  position: absolute;
+  width: 380px;
+  height: 374px;
+  left: 140px;
+  top: 70px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 24px 30px 30px 30px; }
+
+.finding__left {
+  padding-right: 7px;
+  box-sizing: border-box; }
+
+.finding__right {
+  padding-left: 7px;
+  box-sizing: border-box; }
+
+.finding__guests {
+  margin-top: 20px;
+  margin-bottom: 32px; }
 
 /*'Quicksand-Regular'*/
 .datepicker {
@@ -858,7 +862,7 @@ copyright i.fa {
     right: 20px; } }
 
 @media (max-width: 960px) {
-  header button.violetback {
+  header button.btn__violetback {
     display: none; }
   .header__btns .violetborder {
     margin-right: 0px; }

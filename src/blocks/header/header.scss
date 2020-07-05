@@ -114,37 +114,3 @@ header .wrap {
 .header__topMenu li > a:only-child:after { content: ''; }
 /*TopMenu stop*/
 
-/*TopMenu mobile start*/
-.header__topMenu [type="checkbox"], .header__topMenu label.toggleMenu {
-  display: none;
-}
-.header__topMenu label.toggleMenu {
-  width: 38px;
-  height: 38px;
-  position: absolute;
-  right: 20px;
-  top: 1px;
-}
-.header__topMenu label.toggleMenu span {
-  font-size: 38px;
-  color: $dark_shade75;
-}
-input.toggleMenu:checked + label.toggleMenu span.close, label.toggleMenu span.open {
-  display: block;
-}
-label.toggleMenu span.close, input.toggleMenu:checked + label.toggleMenu span.open {
-  display: none;
-}
-input.toggleMenu:checked ~ ul,
-input.toggleSubmenu:checked ~ ul{
-  display: block;
-  position: relative;
-  max-height: 5000px;
-  transition: max-height 2s ease-in;
-}
-input.toggleSubmenu:checked ~ ul {
-  margin-left: -10px;
-  padding-bottom: 20px;
-}
-/*TopMenu mobile stop*/
-

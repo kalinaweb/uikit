@@ -1,4 +1,10 @@
 block variables
+include ../../blocks/logo/logo
+include ../../blocks/btn/btn
+include ../../blocks/input-arrow/input-arrow
+include ../../blocks/select-count/select-count
+include ../../blocks/burger/burger
+include ../../blocks/nav/nav
 
 doctype html
 html(lang="ru")
@@ -9,10 +15,10 @@ html(lang="ru")
     link(href="./css/datepicker.css" rel="stylesheet")
   body
     div#main
-      include header
+      include ../../blocks/header/header
       block content
-      include footer
-      include copyright
+      include ../../blocks/footer/footer
+      include ../../blocks/copyright/copyright
     script(src='./js/jquery-3.5.1.min.js')
     script(src='./js/datepicker.js')
     script
