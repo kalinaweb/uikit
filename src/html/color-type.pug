@@ -1,0 +1,19 @@
+extend views/empty
+block variables
+  - var pageTitle = 'Colors & Type'
+
+block content
+  div.content.color-type
+    div.inline-block
+      +colors('#1F2041', 'Dark Shade 100%', '#1F2041')
+      +colors('rgba(31, 32, 65, 0.75)', 'Dark Shade 75%', '#1F2041')
+      +colors('rgba(31, 32, 65, 0.5)', 'Dark Shade 50%', '#1F2041')
+      +colors('rgba(31, 32, 65, 0.25)', 'Dark Shade 25%', '#1F2041')
+      +colors('rgba(31, 32, 65, 0.05)', 'Dark Shade 5%', '#1F2041')
+      +colors('#BC9CFF', 'Purple', '#BC9CFF')
+      +colors('#6FCF97', 'Green', '#6FCF97')
+    div.inline-block.v-a-top
+      +headers('h1', 'This one is the sub-section or widget title')
+      +headers('h2', 'Next one is the item title inside widgets','m-b48')
+      +headers('h3', 'This is a label or CTA text','headers__third')
+      +headers('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', 'headers__fourth')

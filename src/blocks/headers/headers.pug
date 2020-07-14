@@ -1,0 +1,24 @@
+mixin headers(name1, name2, mods)
+
+  //- Принимает:
+  //-   name1  {string} - текст слева
+  //-   name2  {string} - текст справа
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +headers('h1', 'This one is the sub-section or widget title')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    var style = name1 + 'style';
+    var headerText = "<"+ name1 + ">" + name2 +"</"+ name1 + ">";
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ' + modsList[i].trim();
+      }
+    }
+
+  div.headers(class=allMods)
+    div.inline-block.headers__name1(class=style)= name1
+    div.inline-block.headers__name2(class=style)= name2

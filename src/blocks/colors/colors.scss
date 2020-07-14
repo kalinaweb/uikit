@@ -1,0 +1,23 @@
+.colors {
+  margin-bottom: 16px;
+  & > .colors__color {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 36px;
+  }
+  & > .colors__text {
+    font-family: 'Quicksand-Regular';
+    font-style: normal;
+    font-size: 19px;
+    line-height: 29px;
+    color: #1F2041;
+    vertical-align: top;
+    margin-top: 5px;
+    letter-spacing: -1px;
+    & > b {
+      font-family: 'Quicksand-Bold';
+      letter-spacing: -0.4px;
+    }
+  }
+}

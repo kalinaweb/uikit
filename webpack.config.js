@@ -69,6 +69,10 @@ module.exports = {
             filename: 'index.html',
             template: './src/html/index.pug',
         }),
+        new HtmlWebpackPlugin({
+            filename: 'color-type.html',
+            template: './src/html/color-type.pug',
+        }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'

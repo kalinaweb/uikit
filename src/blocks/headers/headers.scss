@@ -1,0 +1,53 @@
+.headers {
+  width: 435px;
+  margin-bottom: 42px;
+  & > div:first-child {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    color: $dark_shade25;
+    text-transform: uppercase;
+    width: 63px;
+    vertical-align: top;
+    padding-left: 10px;
+  }
+  & > .h1style {
+    @extend h1;
+    font-family: 'Quicksand-Bold';
+    letter-spacing: -0.45px;
+    font-weight: normal;
+  }
+  & > .h2style {
+    @extend h2;
+    font-family: 'Quicksand-Bold';
+    letter-spacing: -0.35px;
+    font-weight: normal;
+  }
+  & > .h3style {
+    @extend h3;
+    letter-spacing: -0.35px;
+  }
+  & > .Bodystyle {
+    @extend p;
+    letter-spacing: -0.35px;
+  }
+  & > div:last-child {
+    width: 350px;
+  }
+  &.headers__third > div:first-child {
+    padding-left: 20px;
+    padding-top: 2px;
+  }
+  &.headers__third > div:last-child {
+    letter-spacing: 0.3px;
+  }
+  &.headers__fourth > div:first-child {
+    padding-left: 0;
+    text-transform: none;
+  }
+  &.headers__fourth > div:last-child {
+    letter-spacing: 0.0px;
+    width: 310px;
+  }
+
+}

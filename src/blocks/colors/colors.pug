@@ -1,0 +1,27 @@
+mixin colors(color, name1, name2)
+
+  //- Принимает:
+  //-   id  {string} - id input
+  //-   value  {string} - значение input
+  //-   inputClasses  {string} - список модификаторов для input
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +colors('#1F2041', 'Dark Shade 100%', '#1F2041')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    var backcolor = "background:"+ color;
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ' + modsList[i].trim();
+      }
+    }
+
+  div.colors
+    div.colors__color.inline-block(style=backcolor)
+    div.colors__text.inline-block
+      b= name1
+      br
+      span= name2

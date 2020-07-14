@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors &amp; Type</title>
+    <link href="./css/datepicker.css" rel="stylesheet">
+  <link href="./css/style.bundle.css" rel="stylesheet"></head>
+  <body class="empty">
+    <div id="main">
+      <div class="content color-type">
+        <div class="inline-block">
+          <div class="colors">
+            <div class="colors__color inline-block" style="background:#1F2041"></div>
+            <div class="colors__text inline-block"><b>Dark Shade 100%</b><br><span>#1F2041</span></div>
+          </div>
+          <div class="colors">
+            <div class="colors__color inline-block" style="background:rgba(31, 32, 65, 0.75)"></div>
+            <div class="colors__text inline-block"><b>Dark Shade 75%</b><br><span>#1F2041</span></div>
+          </div>
+          <div class="colors">
+            <div class="colors__color inline-block" style="background:rgba(31, 32, 65, 0.5)"></div>
+            <div class="colors__text inline-block"><b>Dark Shade 50%</b><br><span>#1F2041</span></div>
+          </div>
+          <div class="colors">
+            <div class="colors__color inline-block" style="background:rgba(31, 32, 65, 0.25)"></div>
+            <div class="colors__text inline-block"><b>Dark Shade 25%</b><br><span>#1F2041</span></div>
+          </div>
+          <div class="colors">
+            <div class="colors__color inline-block" style="background:rgba(31, 32, 65, 0.05)"></div>
+            <div class="colors__text inline-block"><b>Dark Shade 5%</b><br><span>#1F2041</span></div>
+          </div>
+          <div class="colors">
+            <div class="colors__color inline-block" style="background:#BC9CFF"></div>
+            <div class="colors__text inline-block"><b>Purple</b><br><span>#BC9CFF</span></div>
+          </div>
+          <div class="colors">
+            <div class="colors__color inline-block" style="background:#6FCF97"></div>
+            <div class="colors__text inline-block"><b>Green</b><br><span>#6FCF97</span></div>
+          </div>
+        </div>
+        <div class="inline-block v-a-top">
+          <div class="headers">
+            <div class="inline-block headers__name1 h1style">h1</div>
+            <div class="inline-block headers__name2 h1style">This one is the sub-section or widget title</div>
+          </div>
+          <div class="headers  m-b48">
+            <div class="inline-block headers__name1 h2style">h2</div>
+            <div class="inline-block headers__name2 h2style">Next one is the item title inside widgets</div>
+          </div>
+          <div class="headers  headers__third">
+            <div class="inline-block headers__name1 h3style">h3</div>
+            <div class="inline-block headers__name2 h3style">This is a label or CTA text</div>
+          </div>
+          <div class="headers  headers__fourth">
+            <div class="inline-block headers__name1 Bodystyle">Body</div>
+            <div class="inline-block headers__name2 Bodystyle">This is the body text which is used for most of the design, like paragraphs, lists, etc.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/datepicker.js"></script>
+    <script>;$(function () {
+  let firstDay = '';
+  let myDatepicker = $('.js_dateFromDatepicker').datepicker({
+              navTitles: {
+                days: 'MM yyyy'
+              },
+              range: true,
+              showOtherMonths: false,
+              clearButton: true,
+              offset: -4,
+              nextHtml: '<span class="material-icons">arrow_forward</span>',
+              prevHtml: '<span class="material-icons">arrow_back</span>',
+              dateFormat: 'dd.mm.yyyy',
+              onSelect: function(date, cellType) {
+                      if(firstDay == '') {
+                        $('.js_arriveFinding').val(getDate(myDatepicker.selectedDates[0]));
+                        firstDay = myDatepicker.selectedDates[0];
+                      }
+                      else {
+                        if(getDate(myDatepicker.selectedDates[0]) == 'Invalid Date') $('.js_arriveFinding').val('ДД.ММ.ГГГГ');
+                        else $('.js_arriveFinding').val(getDate(myDatepicker.selectedDates[0]));
+
+                        if(getDate(myDatepicker.selectedDates[1]) == 'Invalid Date') $('.js_arriveDeparture').val('ДД.ММ.ГГГГ');
+                        else $('.js_arriveDeparture').val(getDate(myDatepicker.selectedDates[1]));
+                      }
+                  }
+            }).data('datepicker');
+
+  $("#arrive").click(function() {
+    myDatepicker.show();
+  });
+
+  $(".datepicker").click(function() {
+    $("#arrive").addClass('active');
+    $("#departure").addClass('active');
+  });
+
+  $(".js_applyDatePicker").click(function() {
+    myDatepicker.hide();
+  });
+
+var options = {
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric'
+}
+
+function getDate(str) {
+  let date = new Date(str);
+  return date.toLocaleString('ru', options)
+}
+
+
+});
+
+    </script>
+  <script src="./js/bundle.js"></script></body>
+</html>

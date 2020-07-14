@@ -18,6 +18,10 @@
   .index__slogan {
     right: 70px;
   }
+  .content.color-type > div:first-child {
+    width: 40.0%;
+    margin-bottom: 140px;
+  }
 }
 @media (max-width: 1152px) {
   .wrap {
@@ -40,6 +44,9 @@
   .header__btns {
     min-width: 90px;
     width: 90px;
+  }
+  .content.color-type > div:first-child {
+    width: 100.0%;
   }
 }
 @media (max-width: 800px) {
@@ -106,6 +113,17 @@
     flex: none;
     width: 30%;
   }
+  .content.color-type {
+    padding: 120px 30px 30px 30px;
+  }
+}
+@media (max-width: 560px) {
+  .headers {
+    width: 100%;
+  }
+  .headers > div:last-child, .headers.headers__fourth > div:last-child {
+    width: 80%;
+  }
 }
 @media (max-width: 440px) {
   .finding {
@@ -132,6 +150,9 @@
   input.toggleMenu:checked ~ ul, input.toggleSubmenu:checked ~ ul {
     width: 173px;
   }
+  .headers > div:last-child, .headers.headers__fourth > div:last-child {
+    width: 70%;
+  }
 }
 @media (max-width: 387px) {
   .footer__menu {
@@ -149,5 +170,9 @@
   }
   .datepicker--cell.-selected-.-range-from-:after {
     width: 40%;
+  }
+  .content.color-type {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
