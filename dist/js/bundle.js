@@ -209,8 +209,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.5.
 "use strict";
 
 
-console.log("hello, world");
-
 /***/ }),
 
 /***/ "./src/scss/style.scss":

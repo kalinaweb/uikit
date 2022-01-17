@@ -73,6 +73,10 @@ module.exports = {
             filename: 'color-type.html',
             template: './src/html/color-type.pug',
         }),
+        new HtmlWebpackPlugin({
+            filename: 'headers-footers.html',
+            template: './src/html/headers-footers.pug',
+        }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
